@@ -76,14 +76,20 @@ const SignUpPage = () => {
           name="SignUpForm"
           initialValues={{ remember: true }}
           onFinish={registerUser}
-          style={{ maxWidth: 600, margin: 'auto', borderRadius: 4, padding: 40, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.9)' }}
+          style={{ maxWidth: 600, margin: 'auto', borderRadius: 4, padding: 40, boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.9)',backgroundColor:'rgba(255, 255, 255, 0.50)' }}
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
+          
         >
-          <h1>Sign Up</h1>
-          <img src="https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg" alt="Login"
-            style={{ width: '100px', marginBottom: 20, borderRadius: "50%" }} />
+          <div align="middle">
+            <h1>Register</h1>
+          <img
+            src="https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg"
+            alt="Login"
+            style={{ width: '100px', marginBottom: 20, borderRadius: '50%' }}
+          />
+          </div>
 
           <Form.Item
             name="username"
@@ -137,7 +143,7 @@ const SignUpPage = () => {
               Sign Up
             </Button>
           </Form.Item>
-          <p>Already have an account? <Link to="/login" style={{ color: "white" }}>Sign In</Link></p>
+          <p>Already have an account? <Link to="/login" style={{ color: "red",fontWeight:'bold' }}>Sign In</Link></p>
         </Form>
         </Col>
     </Row>

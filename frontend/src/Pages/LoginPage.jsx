@@ -82,17 +82,20 @@ const LoginPage = () => {
             borderRadius: 4,
             padding: 40,
             boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.9)',
+            backgroundColor:'rgba(255, 255, 255, 0.50)'
           }}
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
         >
-          <h1>Login</h1>
+          <div align="middle">
+            <h1>Login</h1>
           <img
             src="https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg"
             alt="Login"
             style={{ width: '100px', marginBottom: 20, borderRadius: '50%' }}
           />
+          </div>
           <Form.Item
             name="username"
             rules={[{ required: true, message: 'Please input your username!' }]}
@@ -119,7 +122,7 @@ const LoginPage = () => {
             </Button>
           </Form.Item>
           <p>
-            Don't have an account? <Link to="/register" style={{ color: 'white' }}>Sign Up</Link>
+            Don't have an account? <Link to="/register" style={{ color: 'red',fontWeight:'bold' }}>Sign Up</Link>
           </p>
         </Form>
       </Col>

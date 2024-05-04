@@ -6,11 +6,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'animate.css';
 import Footers from "../Components/Footer";
+import scrollLogo from '../assets/images/arrow.png'
 AOS.init();
 
 export default function AstronomyPictureOfTheDay() {
     const [APOD, setAPOD] = useState([]);
-    const [showMoreInfo, setShowMoreInfo] = useState(false);
 
     
     useEffect(() => {
@@ -35,15 +35,22 @@ export default function AstronomyPictureOfTheDay() {
             <NavBar />
             <p style={{ textAlign: 'center', fontSize: 30, fontWeight: 'bold',color:'rgba(255, 255, 255, 0.74)' }}> {APOD.title}</p>
 
+            <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }}>
+                <Card style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)',borderColor:'rgba(255, 255, 255, 0.0)' }}>
+                    <img
+                        src={scrollLogo}
+                        alt="Login"
+                        style={{ width: '50px', borderRadius: '50%' }}
+                    />
+                </Card>
+            </div>
+
             <Card data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" style={{  margin: 50, backgroundColor: 'rgba(255, 255, 255, 0.5)', marginTop:"100vh", marginBottom:200 }}>
                 <p style={{fontWeight:"bold"}}>Title: {APOD.title}</p>
                 <p style={{fontWeight:"bold"}}>Explanation: {APOD.explanation}</p>
                 <p style={{fontWeight:"bold"}}>Date: {APOD.date}</p>
             </Card>
 
-            <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }}>
-                    <Button style={{color:"white",backgroundColor:'rgba(0, 0, 0, 0.60)'}}>---Scroll Down for more Information---</Button>
-                </div>
 
         
             <Footers/>
