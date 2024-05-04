@@ -97,7 +97,10 @@ export default function NavBar() {
                                             marginRight: "5px",
                                         }}
                                     />
-                                    <p style={{ color: "white", fontWeight: "bold", margin: "0" }}>{user.user.username}</p>
+                                    <p style={{ color: "white", fontWeight: "bold", margin: "0" }}>
+                                        {/* {user.user.username} */}
+                                        User Name
+                                        </p>
                                 </div>
                             </Dropdown>
                         </Col>
