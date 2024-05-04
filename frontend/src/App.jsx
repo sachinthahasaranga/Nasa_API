@@ -22,21 +22,17 @@ function App() {
   return (
     <Router>
       <Routes>
-        {user &&user.user.role == 'User' ? (
+        
           <>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/marsroverphotos" element={<MarsRoverPhotos />} />
             <Route path="/apod" element={<AstronomyPictureOfTheDay />} />
             <Route path="/logout" element={<Navigate to="/" />} />
-          </>
-        ) : (
-          <>
-            <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
             <Route path="/register" element={<SignUpPage />} />
           </>
-        )}
+        
       </Routes>
     </Router>
   );

@@ -54,7 +54,7 @@ const LoginPage = () => {
       password
     };
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', user);
+      const response = await axios.post('https://nasa-api-yj1a.onrender.com/auth/login', user);
       //localStorage.setItem('token', response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data));
       alert('Login successful!');
