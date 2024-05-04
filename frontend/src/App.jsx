@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* {user &&user.user.role == 'User' ? (
+        {user &&user.user.role == 'User' ? (
           <>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
@@ -36,9 +36,9 @@ function App() {
             <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
             <Route path="/register" element={<SignUpPage />} />
           </>
-        )} */}
+        )}
 
-        <>
+        {/* <>
           <Route path="/" element={<LoginPage/> }/>
           <Route path="/home" element={<Home />} />
           <Route path="/marsroverphotos" element={<MarsRoverPhotos />} />
@@ -46,7 +46,7 @@ function App() {
           <Route path="/logout" element={<Navigate to="/" />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           <Route path="/register" element={<SignUpPage />} />
-        </>
+        </> */}
       </Routes>
     </Router>
   );

@@ -98,8 +98,8 @@ export default function NavBar() {
                                         }}
                                     />
                                     <p style={{ color: "white", fontWeight: "bold", margin: "0" }}>
-                                        {/* {user.user.username} */}
-                                        User Name
+                                        {user.user.username}
+                                        //User Name
                                         </p>
                                 </div>
                             </Dropdown>
